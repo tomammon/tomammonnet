@@ -1,3 +1,31 @@
+#
+# tomammon.net resume application
+# Service Node docker-compose.yml
+#
+# This compose file brings up all the necessary containers on a Service Node
+# to service the tomammon.net resume web application. See https://github.com/tomammon/tomammonnet/
+# for details of the architecture of the application.
+#
+# NOTE: The following environment variables must be present when the containers
+# are instantiated for the first time:
+#
+# $TANDB_PASSWD
+##
+## this specifies what the mariadb root user password will be set to when the
+## database is first created. Subsequent runs of the container don't need
+## this set because the password is stored in the mariadb database itself.
+### bash CLI syntax: # export TANDB_PASSWD=yourpasswordhere
+#
+# NOTE: The following environment variables must be present each time the
+# mariadb container starts up:
+#
+# $MARIADB_SLAVE_SERVERID
+##
+## this specifies the server-id that the database will use in its
+## replication config. This must be unique across all Service Nodes and must
+## not be 1.
+### bash CLI syntax: # export MARIADB_SLAVE_SERVERID=2
+
 version: '3'
 
 services:
@@ -64,6 +92,7 @@ services:
     volumes:
       - /opt/tan/dbdata:/var/lib/mysql
       - /opt/tan/dbconfig:/etc/mysql/conf.d
+    command: mysqld --server-id=${MARIADB_SLAVE_SERVERID}
     networks:
       default:
       backend:
@@ -76,4 +105,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.0.0/24  
+        - subnet: 192.168.0.0/24
