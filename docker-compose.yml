@@ -92,7 +92,7 @@ services:
     volumes:
       - /opt/tan/dbdata:/var/lib/mysql
       - /opt/tan/dbconfig:/etc/mysql/conf.d
-    command: mysqld --server-id=${MARIADB_SLAVE_SERVERID}
+    command: [mysqld, --server_id=2]
     networks:
       default:
       backend:

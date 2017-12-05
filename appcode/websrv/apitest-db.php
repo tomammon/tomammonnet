@@ -1,7 +1,7 @@
 <?php
 $curl = curl_init();
 curl_setopt_array($curl, array(
- CURLOPT_URL => "http://192.168.0.101/api/v1/tanapi.php/testapi",
+ CURLOPT_URL => "http://192.168.0.100/api/v1/tanapi.php/testdb",
  CURLOPT_RETURNTRANSFER => true,  // curl options
  CURLOPT_ENCODING => "",  // more options
  CURLOPT_HTTPHEADER => array(
