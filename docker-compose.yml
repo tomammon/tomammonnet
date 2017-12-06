@@ -15,16 +15,6 @@
 ## database is first created. Subsequent runs of the container don't need
 ## this set because the password is stored in the mariadb database itself.
 ### bash CLI syntax: # export TANDB_PASSWD=yourpasswordhere
-#
-# NOTE: The following environment variables must be present each time the
-# mariadb container starts up:
-#
-# $MARIADB_SLAVE_SERVERID
-##
-## this specifies the server-id that the database will use in its
-## replication config. This must be unique across all Service Nodes and must
-## not be 1.
-### bash CLI syntax: # export MARIADB_SLAVE_SERVERID=2
 
 version: '3'
 
@@ -44,21 +34,21 @@ services:
         ipv4_address: 192.168.0.2
 
   websrv-a:
-    image: alastairhm/alpine-lighttpd-php
+    image: tomammon/tomammon.net:webserver
     restart: always
     container_name: websrv-a
     volumes:
-      - /opt/tan/appcode/websrv:/var/www
+      - /opt/tan/appcode/websrv:/var/www/html
     networks:
       backend:
         ipv4_address: 192.168.0.10
 
   websrv-b:
-    image: alastairhm/alpine-lighttpd-php
+    image: tomammon/tomammon.net:webserver
     restart: always
     container_name: websrv-b
     volumes:
-      - /opt/tan/appcode/websrv:/var/www
+      - /opt/tan/appcode/websrv:/var/www/html
     networks:
       backend:
         ipv4_address: 192.168.0.11
@@ -69,6 +59,7 @@ services:
     container_name: appsrv-a
     volumes:
       - /opt/tan/appcode/appsrv:/var/www/html
+      - /var/phplib:/var/phplib
     networks:
       backend:
         ipv4_address: 192.168.0.100
@@ -79,6 +70,7 @@ services:
     container_name: appsrv-b
     volumes:
       - /opt/tan/appcode/appsrv:/var/www/html
+      - /var/phplib:/var/phplib
     networks:
       backend:
         ipv4_address: 192.168.0.101

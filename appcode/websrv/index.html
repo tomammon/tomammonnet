@@ -32,19 +32,16 @@ function GetPersonalInfo(){
 	        // multidimensional array, then print the array
 	        $json_dbresults = json_decode($response, true);
 			return $json_dbresults;
-	        //print_r($decoded);
 	}
 
-$jsonresults = GetPersonalInfo();
 
-echo "this is my stuff\n";
 
 }
 
-
+$jsonresults = GetPersonalInfo();
 
 ?>
-<link type="text/css" rel="stylesheet" href="<?php echo $jsonresults[7]." and stuff"; ?>">
+<link type="text/css" rel="stylesheet" href="<?php echo $jsonresults[6]; ?>">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
@@ -55,19 +52,19 @@ echo "this is my stuff\n";
 	<div id="cv" class="instaFade">
 		<div class="mainDetails">
 			<div id="headshot" class="quickFade">
-				<img src="TomNewProfile.jpg" alt="Tom Ammon" />
+				<!--photo url--><img src="<?php echo $jsonresults[5]; ?>" alt="<?php echo $jsonresults[0]; ?>" />
 			</div>
 
 			<div id="name">
-				<h1 class="quickFade delayTwo">Tom Ammon</h1>
-				<h2 class="quickFade delayThree">Senior Network Engineer</h2>
+				<!--name--><h1 class="quickFade delayTwo"><?php echo $jsonresults[0]; ?></h1>
+				<!--current title--><h2 class="quickFade delayThree"><?php echo $jsonresults[1]; ?></h2>
 			</div>
 
 			<div id="contactDetails" class="quickFade delayFour">
 				<ul>
-					<li><a href="mailto:tom@tomsbox.net" target="_blank">tom@tomsbox.net</a></li>
-					<li><a href="http://www.tomsbox.net">www.tomsbox.net</a></li>
-					<li>m: +1 801 784 2628</li>
+					<li><!--email addr--><a href="mailto:<?php echo $jsonresults[2]; ?>" target="_blank"><?php echo $jsonresults[2]; ?></a></li>
+					<li><!--website url--><a href="<?php echo $jsonresults[4]; ?>"><?php echo $jsonresults[4]; ?></a></li>
+					<li><!--phone-->m: <?php echo $jsonresults[3]; ?></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
