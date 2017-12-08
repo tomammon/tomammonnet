@@ -54,6 +54,13 @@ if (in_array($APIKEY, $headers)){ //if the API key is in the http header, contin
 				echo json_encode($row);
 				break;
 
+			case "querypprofile":
+				$pinfoquery = "SELECT section_head,profiletext FROM personalprofile";
+				$pinfo_data = mysqli_query($conn, $pinfoquery);
+				$row = mysqli_fetch_row($pinfo_data);
+				echo json_encode($row);
+				break;
+
 			default: //if the first part of the URL was not found in this switch statement
 			     //then send back our canned error message
 				echo json_encode($notfound);

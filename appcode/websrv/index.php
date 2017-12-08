@@ -9,10 +9,10 @@
 
 <?php
 
-function GetPersonalInfo(){
+function GetJsonDataFromAppTier($endpoint){
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
-	 CURLOPT_URL => "http://192.168.0.100/api/v1/tanapi.php/querypinfo",
+	 CURLOPT_URL => "http://192.168.0.100/api/v1/tanapi.php/$endpoint",
 	 CURLOPT_RETURNTRANSFER => true,  // curl options
 	 CURLOPT_ENCODING => "",  // more options
 	 CURLOPT_HTTPHEADER => array(
@@ -33,15 +33,14 @@ function GetPersonalInfo(){
 	        $json_dbresults = json_decode($response, true);
 			return $json_dbresults;
 	}
-
-
-
 }
 
-$jsonresults = GetPersonalInfo();
+$personalinfo = GetJsonDataFromAppTier('querypinfo');
+
+$profileinfo = GetJsonDataFromAppTier('querypprofile');
 
 ?>
-<link type="text/css" rel="stylesheet" href="<?php echo $jsonresults[6]; ?>">
+<link type="text/css" rel="stylesheet" href="<?php echo $personalinfo[6]; ?>">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
@@ -52,22 +51,44 @@ $jsonresults = GetPersonalInfo();
 	<div id="cv" class="instaFade">
 		<div class="mainDetails">
 			<div id="headshot" class="quickFade">
-				<!--photo url--><img src="<?php echo $jsonresults[5]; ?>" alt="<?php echo $jsonresults[0]; ?>" />
+				<!--photo url--><img src="<?php echo $personalinfo[5]; ?>" alt="<?php echo $personalinfo[0]; ?>" />
 			</div>
 
 			<div id="name">
-				<!--name--><h1 class="quickFade delayTwo"><?php echo $jsonresults[0]; ?></h1>
-				<!--current title--><h2 class="quickFade delayThree"><?php echo $jsonresults[1]; ?></h2>
+				<!--name--><h1 class="quickFade delayTwo"><?php echo $personalinfo[0]; ?></h1>
+				<!--current title--><h2 class="quickFade delayThree"><?php echo $personalinfo[1]; ?></h2>
 			</div>
 
 			<div id="contactDetails" class="quickFade delayFour">
 				<ul>
-					<li><!--email addr--><a href="mailto:<?php echo $jsonresults[2]; ?>" target="_blank"><?php echo $jsonresults[2]; ?></a></li>
-					<li><!--website url--><a href="<?php echo $jsonresults[4]; ?>"><?php echo $jsonresults[4]; ?></a></li>
-					<li><!--phone-->m: <?php echo $jsonresults[3]; ?></li>
+					<li><!--email addr--><a href="mailto:<?php echo $personalinfo[2]; ?>" target="_blank"><?php echo $personalinfo[2]; ?></a></li>
+					<li><!--website url--><a href="http://<?php echo $personalinfo[4]; ?>"><?php echo $personalinfo[4]; ?></a></li>
+					<li><!--phone-->m: <?php echo $personalinfo[3]; ?></li>
 				</ul>
 			</div>
-			<div class="clear"></div>
+			<div class="clear">
+			</div>
 		</div>
+		<div id="mainArea" class="quickFade delayFive">
+			<section>
+				<article>
+					<div class="sectionTitle">
+						<!--Personal Profile Heading--><h1><?php echo $profileinfo[0]; ?></h1>
+					</div>
+
+					<div class="sectionContent">
+						<!--profile content--><p><?php echo $profileinfo[1]; ?></p>
+					</div>
+				</article>
+
+				<div class="clear">
+				</div>
+			</section>
+
+
+
+
+
+
 </body>
 </html>
