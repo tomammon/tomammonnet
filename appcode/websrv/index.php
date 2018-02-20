@@ -250,7 +250,7 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
             <div class="sectionContent">
                 <article>
                     <h2>Cisco Systems</h2>
-					<p class="subDetails">CCIE #57102, Routing & Switching</p>
+					<p class="subDetails">CCIE #57102, Routing &amp; Switching</p>
                 </article>
 
             </div>
