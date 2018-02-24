@@ -35,6 +35,21 @@ function GetJsonDataFromAppTier($endpoint){
 	}
 }
 
+function SimpleList($list){
+	foreach ($list as $listitem){
+		$item .= $listitem.", ";
+	}
+	return rtrim($item, ", ");
+}
+
+function UList($list){
+	foreach ($list as $listitem){
+		$ulist .= "<li>$listitem</li>\n";
+	}
+	return $ulist;
+}
+
+
 $personalinfo = GetJsonDataFromAppTier('querypinfo');
 
 $profileinfo = GetJsonDataFromAppTier('querypprofile');
@@ -84,11 +99,165 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
 				<div class="clear">
 				</div>
 			</section>
+			<section>
+			<div class="sectionTitle">
+				<h1>Experience</h1>
+				<h2>Adobe Systems</h2>
+				<br/>
+				<h2>Senior Network Engineer<h2>
+					<p class="subDetails">April 2017 - Present</p>
+
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Vendors and Technologies</h2>
+					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/adbe')); ?>
+					</p>
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/adbe')); ?></p>
+				</article>
+
+				<article>
+					<h2>Network Engineering</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/adbe/network_engineering')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Leadership</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/adbe/communication_leadership')); ?>
+						</ul>
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+		<section>
+			<div class="sectionTitle">
+				<h2>The Church of Jesus Christ of Latter-Day Saints</h2>
+				<br/>
+				<br/>
+				<h2>Senior Network Engineer<h2>
+					<p class="subDetails">October 2015 - March 2017</p>
+				<br/>
+				<h2>Network Engineer<h2>
+					<p class="subDetails">May 2012 - October 2015</p>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Vendors and Technologies</h2>
+					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/lds')); ?></p>
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/lds')); ?></p>
+				</article>
+
+				<article>
+					<h2>Network Engineering</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/lds/network_engineering')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Leadership</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/lds/communication_leadership')); ?>
+						</ul>
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+		<section>
+			<div class="sectionTitle">
+				<h2>University of Utah Center for High Performance Computing</h2>
+				<br/>
+				<br/>
+				<h2>Network Operations Team Lead<h2>
+					<p class="subDetails">Nov 2010 - May 2012</p>
+				<br/>
+				<h2>Network Engineer<h2>
+					<p class="subDetails">July 2006 - Nov 2010</p>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Vendors and Technologies</h2>
+					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/chpc')); ?></p>
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/chpc')); ?></p>
+				</article>
+
+				<article>
+					<h2>Network Engineering and Operations</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/chpc/neteng_ops')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Project Management</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/chpc/project_management')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Presentation</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/chpc/communication_presentation')); ?>
+						</ul>
+					</p>
+				</article>
 
 
 
+			</div>
+			<div class="clear"></div>
+		</section>
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
 
+			<div class="sectionContent">
+				<article>
+					<h2>Weber State University</h2>
+					<p class="subDetails">B.S., Telecommunications Administration</p>
+				</article>
 
+			</div>
+			<div class="clear"></div>
+		</section>
+
+        <section>
+            <div class="sectionTitle">
+                <h1>Certifications</h1>
+            </div>
+
+            <div class="sectionContent">
+                <article>
+                    <h2>Cisco Systems</h2>
+					<p class="subDetails">CCIE #57102, Routing &amp; Switching</p>
+                </article>
+
+            </div>
+        	<div class="clear"></div>
+        </section>
+	</div>
+</div>
 
 </body>
 </html>

@@ -3,6 +3,22 @@
 //username and password will be loaded into $dbUsername and $dbPassword
 require("/var/phplib/dbcreds.php");
 
+//function to query the mysql database with provider query parameters and return
+//the results.
+function querybackend($conn,$query) {
+	$data = mysqli_query($conn, $query);
+	$row = mysqli_fetch_row($data);
+	return json_encode($row);
+}
+
+function querybackendmultirow($conn,$query) {
+	$data = mysqli_query($conn, $query);
+	while ($row = mysqli_fetch_row($data)) {
+		$output[] = $row[0];
+	}
+	return json_encode($output);
+}
+
 // specify the API key
 $APIKEY = "MySecretKey";
 // find out which http verb was used in the request
@@ -48,17 +64,28 @@ if (in_array($APIKEY, $headers)){ //if the API key is in the http header, contin
 				break;
 
 			case "querypinfo":
-				$pinfoquery = "SELECT name,position,email,phone,website,photourl,cssurl FROM personalinfo";
-				$pinfo_data = mysqli_query($conn, $pinfoquery);
-				$row = mysqli_fetch_row($pinfo_data);
-				echo json_encode($row);
+				$query = "SELECT name,position,email,phone,website,photourl,cssurl FROM personalinfo";
+				echo querybackend($conn,$query);
 				break;
 
 			case "querypprofile":
-				$pinfoquery = "SELECT section_head,profiletext FROM personalprofile";
-				$pinfo_data = mysqli_query($conn, $pinfoquery);
-				$row = mysqli_fetch_row($pinfo_data);
-				echo json_encode($row);
+				$query = "SELECT section_head,profiletext FROM personalprofile";
+				echo querybackend($conn,$query);
+				break;
+
+			case "queryvendortech":
+				$query = "SELECT ventech FROM vendortech WHERE employer = '$request[1]'";
+				echo querybackendmultirow($conn,$query);
+				break;
+
+			case "querykeywords":
+				$query = "SELECT keyword FROM techkeywords WHERE employer = '$request[1]'";
+				echo querybackendmultirow($conn,$query);
+				break;
+
+			case "querybpoints":
+				$query = "SELECT bulletpoint FROM bpoints WHERE employer = '$request[1]' AND article = '$request[2]'";
+				echo querybackendmultirow($conn,$query);
 				break;
 
 			default: //if the first part of the URL was not found in this switch statement
