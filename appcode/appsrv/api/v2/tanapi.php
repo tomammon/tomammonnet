@@ -20,7 +20,8 @@ function querybackendmultirow($conn,$query) {
 }
 
 function querybackendmulticolumn($conn,$query) {
-	$data = mysqli_fetch_array($conn,$query);
+	//still bugs in here. mysqli_fetch_array still loads data one row at a time, need to fix
+	$data = mysqli_fetch_array($conn, $query);
 	return json_encode($data);
 }
 
