@@ -67,7 +67,7 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
 <style>
 a {
 text-decoration: none;
-color: #d742f4;
+color: #8b1ca0;
 }
 </style>
 <!--[if lt IE 9]>
