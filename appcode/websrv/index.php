@@ -256,6 +256,26 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
             </div>
         	<div class="clear"></div>
         </section>
+		<section>
+			<div class="sectionTitle">
+				<h1>Portfolio</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Other Samples of My Work</h2>
+					<p>
+						</p><ul>
+							<li><a href="http://packetpushers.net/?s=tom+ammon">Blogs at PacketPushers.net</a></li>
+<li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
+<li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
+						</ul>
+					<p></p>
+				</article>
+
+			</div>
+			<div class="clear"></div>
+		</section>
 	</div>
 </div>
 
