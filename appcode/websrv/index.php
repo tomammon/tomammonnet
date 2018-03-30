@@ -50,7 +50,6 @@ function UList($list){
 }
 
 function LinkList($linkattrs){
-	print_r($linkattrs);
 	foreach ($linkattrs as $url => $linktext){
 		//future code to loop through returned JSON as an associative array and print a list of links
 		$linklist .= "<li><a href=\"$url\">$linktext</a></li>\n";
