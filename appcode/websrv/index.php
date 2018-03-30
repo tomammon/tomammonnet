@@ -49,6 +49,13 @@ function UList($list){
 	return $ulist;
 }
 
+function LinkList($linkattrs){
+	foreach ($linkattrs as $url=>$linktext){
+		//future code to loop through returned JSON as an associative array and print a list of links
+		$linklist .= "<li><a href=\"$url\">$linktext</a></li>\n";
+	}
+	return $linklist;
+}
 
 $personalinfo = GetJsonDataFromAppTier('querypinfo');
 
@@ -265,10 +272,11 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
 				<article>
 					<h2>Other Samples of My Work</h2>
 					<p>
-						</p><ul>
+					</p><ul><?php echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>
+							<!--
 							<li><a href="http://packetpushers.net/?s=tom+ammon">Blogs at PacketPushers.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
-<li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
+<li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>-->
 						</ul>
 					<p></p>
 				</article>
