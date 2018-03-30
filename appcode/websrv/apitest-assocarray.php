@@ -23,6 +23,6 @@ if ($err) {
         print_r($decoded);
 }
 
-echo "first element is $decoded[0]\n";
+echo "first element is $decoded\n";
 
 ?>
