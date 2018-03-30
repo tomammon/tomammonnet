@@ -19,6 +19,11 @@ function querybackendmultirow($conn,$query) {
 	return json_encode($output);
 }
 
+function querybackendmulticolumn($conn,$query) {
+	$data = mysqli_fetch_array($conn,$query);
+	return json_encode($data);
+}
+
 // specify the API key
 $APIKEY = "MySecretKey";
 // find out which http verb was used in the request
@@ -90,7 +95,7 @@ if (in_array($APIKEY, $headers)){ //if the API key is in the http header, contin
 
 			case "queryportfolio":
 				$query = "SELECT url,linktext FROM portfolioitems";
-				echo querybackendmultirow($conn,$query);
+				echo querybackendmulticolumn($conn,$query);
 				break;
 
 			default: //if the first part of the URL was not found in this switch statement
