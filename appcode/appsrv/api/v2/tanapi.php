@@ -88,6 +88,11 @@ if (in_array($APIKEY, $headers)){ //if the API key is in the http header, contin
 				echo querybackendmultirow($conn,$query);
 				break;
 
+			case "queryportfolio":
+				$query = "SELECT url,linktext FROM portfolioitems";
+				echo querybackendmultirow($conn,$query);
+				break;
+
 			default: //if the first part of the URL was not found in this switch statement
 			     //then send back our canned error message
 				echo json_encode($notfound);
