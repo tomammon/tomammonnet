@@ -272,11 +272,11 @@ $profileinfo = GetJsonDataFromAppTier('querypprofile');
 				<article>
 					<h2>Other Samples of My Work</h2>
 					<p>
-					</p><ul><?php echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>
-							<!--
+					</p><ul><!--<?php //echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>-->
+
 							<li><a href="http://packetpushers.net/?s=tom+ammon">Blogs at PacketPushers.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
-<li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>-->
+<li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
 						</ul>
 					<p></p>
 				</article>
