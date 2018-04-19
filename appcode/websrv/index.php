@@ -279,7 +279,8 @@ color: #8b1ca0;
 					<p>
 					</p><ul><!--<?php //echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>-->
 
-							<li><a href="http://packetpushers.net/author/tom-ammon/">Blogs at PacketPushers.net</a></li>
+							<li><a href="http://packetpushers.net/author/tom-ammon/">Blog at PacketPushers.net</a></li>
+							<li><a href="http://blog.tomammon.net/">Blog at blog.tomammon.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
 <li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
 						</ul>
