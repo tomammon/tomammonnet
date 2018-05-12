@@ -278,7 +278,7 @@ color: #8b1ca0;
 					<h2>Other Samples of My Work</h2>
 					<p>
 					</p><ul><!--<?php //echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>-->
-
+							<li><a href="http://blog.tomammon.net/?s=www.tomammon.net">Under the Hood of the www.tomammon.net Web Application</a></li>
 							<li><a href="http://packetpushers.net/author/tom-ammon/">Blog at PacketPushers.net</a></li>
 							<li><a href="http://blog.tomammon.net/">Blog at blog.tomammon.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
