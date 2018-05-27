@@ -283,6 +283,7 @@ color: #8b1ca0;
 							<li><a href="http://blog.tomammon.net/">Blog at blog.tomammon.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
 <li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
+<li><a href="http://packetpushers.net/podcast/podcasts/show-389-using-mpls-in-the-enterprise/">"Using MPLS In The Enterprise" - PacketPushers Show 389</a></li>
 						</ul>
 					<p></p>
 				</article>
