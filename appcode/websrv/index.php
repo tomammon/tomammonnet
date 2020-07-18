@@ -114,10 +114,59 @@ color: #8b1ca0;
 			<section>
 			<div class="sectionTitle">
 				<h1>Experience</h1>
+				<h2>Whole Foods Market</h2>
+				<br/>
+				<h2>Principal Network Development Engineer</h2><h2>
+						<p class="subDetails">February 2020 - Present</p>
+					<br>
+					<h2>Senior Network Development Engineer</h2>
+						<p class="subDetails">June 2019 - February 2020</p>
+				</h2>	
+
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Technologies</h2>
+					
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/hwc')); ?></p>
+				</article>
+
+				<article>
+					<h2>Architecture</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/architecture')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Network Engineering</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/network_engineering')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Leadership</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/communication_leadership')); ?>
+						</ul>
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+			</section>
+			<section>
+			<div class="sectionTitle">
 				<h2>Hotwire Communications</h2>
 				<br/>
 				<h2>Senior Network Architect<h2>
-					<p class="subDetails">July 2018 - Present</p>
+					<p class="subDetails">July 2018 - May 2019</p>
 
 			</div>
 
