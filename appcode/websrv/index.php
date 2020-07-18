@@ -278,12 +278,16 @@ color: #8b1ca0;
 					<h2>Other Samples of My Work</h2>
 					<p>
 					</p><ul><!--<?php //echo LinkList(GetJsonDataFromAppTier('queryportfolio')); ?>-->
-							<li><a href="http://blog.tomammon.net/?s=www.tomammon.net">Under the Hood of the www.tomammon.net Web Application</a></li>
-							<li><a href="http://packetpushers.net/author/tom-ammon/">Blog at PacketPushers.net</a></li>
-							<li><a href="http://blog.tomammon.net/">Blog at blog.tomammon.net</a></li>
+					<li><a href="http://packetpushers.net/author/tom-ammon/">Blog at PacketPushers.net</a></li>
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
 <li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
 <li><a href="http://packetpushers.net/podcast/podcasts/show-389-using-mpls-in-the-enterprise/">"Using MPLS In The Enterprise" - PacketPushers Show 389</a></li>
+<li><a href="https://thenetworkcollective.com/2019/01/ep43-peering-with-providers/">"Peering with Providers" - Network Collective Episode 43</a></li>
+<li><a href="https://thenetworkcollective.com/2019/04/ep48-bgp-peering-real-world/">"BGP Peering in the Real World" - Network Collective Episode 48</a></li>
+<li><a href="https://rule11.tech/the-hedge-episode-3-derick-winkworth-and-automation/">"Derick Winkworth and Automation" - The Hedge Episode 3</a></li>
+<li><a href="https://rule11.tech/the-hedge-episode-5-geoff-huston/">"Geoff Huston on DOH" - The Hedge Episode 5</a></li>
+<li><a href="https://rule11.tech/the-hedge-podcast-episode-24-single-source-of-truth/">"Single Source of Truth" - The Hedge Episode 24</a></li>
+<li><a href="https://rule11.tech/the-hedge-podcast-30-ethan-banks-and-network-fundamentals/">"Ethan Banks and Network Fundamentals" - The Hedge Episode 30</a></li>
 						</ul>
 					<p></p>
 				</article>
