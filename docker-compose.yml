@@ -84,7 +84,7 @@ services:
     volumes:
       - /opt/tan/dbdata:/var/lib/mysql
       - /opt/tan/dbconfig:/etc/mysql/conf.d
-    command: [mysqld, --server_id=2]
+    command: [mysqld, --server_id=3]
     networks:
       default:
       backend:
