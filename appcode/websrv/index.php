@@ -169,9 +169,8 @@ color: #8b1ca0;
 
 			<div class="sectionContent">
 				<article>
-					<h2>Vendors and Technologies</h2>
-					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/adbe')); ?>
-					</p>
+					<h2>Technologies</h2>
+					
 					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/adbe')); ?></p>
 				</article>
 
@@ -209,8 +208,8 @@ color: #8b1ca0;
 
 			<div class="sectionContent">
 				<article>
-					<h2>Vendors and Technologies</h2>
-					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/lds')); ?></p>
+					<h2>Technologies</h2>
+					
 					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/lds')); ?></p>
 				</article>
 
@@ -248,8 +247,8 @@ color: #8b1ca0;
 
 			<div class="sectionContent">
 				<article>
-					<h2>Vendors and Technologies</h2>
-					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/chpc')); ?></p>
+					<h2>Technologies</h2>
+					
 					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/chpc')); ?></p>
 				</article>
 
