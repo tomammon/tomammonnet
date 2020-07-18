@@ -129,23 +129,14 @@ color: #8b1ca0;
 				<article>
 					<h2>Technologies</h2>
 					
-					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/hwc')); ?></p>
-				</article>
-
-				<article>
-					<h2>Architecture</h2>
-					<p>
-						<ul>
-							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/architecture')); ?>
-						</ul>
-					</p>
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/wfm')); ?></p>
 				</article>
 
 				<article>
 					<h2>Network Engineering</h2>
 					<p>
 						<ul>
-							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/network_engineering')); ?>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/wfm/netdev_engineering')); ?>
 						</ul>
 					</p>
 				</article>
@@ -154,7 +145,7 @@ color: #8b1ca0;
 					<h2>Communication and Leadership</h2>
 					<p>
 						<ul>
-							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/communication_leadership')); ?>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/wfm/technical_leadership')); ?>
 						</ul>
 					</p>
 				</article>
