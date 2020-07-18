@@ -79,6 +79,8 @@ services:
     image: mariadb:10.0.33
     restart: always
     container_name: tandb_slave
+    ports:
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${TANDB_PASSWD}
     volumes:
