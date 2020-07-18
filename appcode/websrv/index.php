@@ -125,7 +125,6 @@ color: #8b1ca0;
 				<article>
 					<h2>Technologies</h2>
 					
-					</p>
 					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/hwc')); ?></p>
 				</article>
 
