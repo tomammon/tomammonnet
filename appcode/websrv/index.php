@@ -114,10 +114,56 @@ color: #8b1ca0;
 			<section>
 			<div class="sectionTitle">
 				<h1>Experience</h1>
+				<h2>Hotwire Communications</h2>
+				<br/>
+				<h2>Senior Network Architect<h2>
+					<p class="subDetails">July 2018 - Present</p>
+
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Vendors and Technologies</h2>
+					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/hwc')); ?>
+					</p>
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/hwc')); ?></p>
+				</article>
+
+				<article>
+					<h2>Architecture</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/architecture')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Network Engineering</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/network_engineering')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Leadership</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/hwc/communication_leadership')); ?>
+						</ul>
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+			</section>
+			<section>
+			<div class="sectionTitle">
 				<h2>Adobe Systems</h2>
 				<br/>
 				<h2>Senior Network Engineer<h2>
-					<p class="subDetails">April 2017 - Present</p>
+					<p class="subDetails">April 2017 - June 2018</p>
 
 			</div>
 
@@ -284,6 +330,8 @@ color: #8b1ca0;
 <li><a href="https://github.com/tomammon">tomammon @ Github</a></li>
 <li><a href="https://hub.docker.com/r/tomammon/">tomammon @ Dockerhub</a></li>
 <li><a href="http://packetpushers.net/podcast/podcasts/show-389-using-mpls-in-the-enterprise/">"Using MPLS In The Enterprise" - PacketPushers Show 389</a></li>
+<li><a href="https://thenetworkcollective.com/2019/01/ep43-peering-with-providers/">"Peering with Providers" - Network Collective Episode 43</a></li>
+<li><a href="https://thenetworkcollective.com/2019/04/ep48-bgp-peering-real-world/">"BGP Peering in the Real World" - Network Collective Episode 48</a></li>
 						</ul>
 					<p></p>
 				</article>
