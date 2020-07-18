@@ -123,8 +123,8 @@ color: #8b1ca0;
 
 			<div class="sectionContent">
 				<article>
-					<h2>Vendors and Technologies</h2>
-					<p class="subDetails"><?php echo SimpleList(GetJsonDataFromAppTier('queryvendortech/hwc')); ?>
+					<h2>Technologies</h2>
+					
 					</p>
 					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/hwc')); ?></p>
 				</article>
