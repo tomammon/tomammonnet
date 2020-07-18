@@ -307,8 +307,8 @@ color: #8b1ca0;
 
             <div class="sectionContent">
                 <article>
-                    <h2>Cisco Systems</h2>
-					<p class="subDetails">CCIE #57102, Routing &amp; Switching</p>
+                    <h4>CCIE #57102, Routing &amp; Switching</h4>
+					<!--<p class="subDetails">CCIE #57102, Routing &amp; Switching</p>-->
                 </article>
 
             </div>
