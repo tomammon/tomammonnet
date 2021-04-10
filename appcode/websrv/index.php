@@ -114,10 +114,47 @@ color: #8b1ca0;
 			<section>
 			<div class="sectionTitle">
 				<h1>Experience</h1>
+				<h2>Oracle</h2>
+				<br/>
+				<h2>Principal Network Development Engineer, Oracle Cloud Infrastructure</h2><h2>
+						<p class="subDetails">September 2020 - Present</p>
+				</h2>	
+
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Technologies</h2>
+					
+					<p><?php echo SimpleList(GetJsonDataFromAppTier('querykeywords/orcl')); ?></p>
+				</article>
+
+				<article>
+					<h2>Systems Engineering</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/orcl/systems_engineering')); ?>
+						</ul>
+					</p>
+				</article>
+
+				<article>
+					<h2>Communication and Leadership</h2>
+					<p>
+						<ul>
+							<?php echo UList(GetJsonDataFromAppTier('querybpoints/orcl/communication_leadership')); ?>
+						</ul>
+					</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+			</section>
+			<section>
+			<div class="sectionTitle">
 				<h2>Whole Foods Market</h2>
 				<br/>
 				<h2>Principal Network Development Engineer</h2><h2>
-						<p class="subDetails">February 2020 - Present</p>
+						<p class="subDetails">February 2020 - September 2020</p>
 					<br>
 					<h2>Senior Network Development Engineer</h2>
 						<p class="subDetails">June 2019 - February 2020</p>
